@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsf/core">
+<head>
+  <title><ui:insert name="titulo">Título por defecto</ui:insert></title>
+</head>
+
+<body>
+<ui:debug hotkey="x" rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}"/>
+
+<div id="header">
+    <ui:insert name="cabecera">
+    Aquí irá la cabecera
+    </ui:insert>
+</div>
+
+
+<div id="content">
+  <ui:insert name="contenido">
+    	Contenido.Cuerpo de la página
+  </ui:insert>
+</div>
+
+<div id="footer">
+  <ui:insert name="pie">
+    	Pie de la página
+  </ui:insert>
+</div>
+
+</body>
+
+</html>

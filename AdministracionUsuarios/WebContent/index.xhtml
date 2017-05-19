@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fc="http://java.sun.com/jsf/core"
+	>
+<head>
+  <title><ui:insert name="title">Default title</ui:insert></title>
+</head>
+
+<body>
+
+<h:form>
+		<h3>
+			<h:outputText value="#{msjs.texto}" />
+		</h3>
+		<h:panelGrid columns="2">
+			<h:outputLabel for="nombre" value="#{msjs.nombre}" />
+			<h:inputText id="nombre" value="#{usuario.nombre}" />
+			<h:outputLabel for="password" value="#{msjs.password}" />
+			<h:inputSecret id="password" value="#{usuario.password}" />
+			
+			<h:commandButton value="#{msjs.login}"
+				action="#{usuario.insertar}" />
+		</h:panelGrid>
+	</h:form>
+
+
+</body>
+
+</html>
